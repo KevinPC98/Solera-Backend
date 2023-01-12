@@ -5,7 +5,6 @@ import { Unauthorized, NotFound } from "http-errors";
 import { compareSync } from "bcryptjs";
 
 export const login = async (data: LoginDto) => {
-  console.log("service");
   console.log(data);
   const user = await prisma.user.findFirst({
     where: {
